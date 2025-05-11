@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:15
+    container_name: deshi_glassdoor_db
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env 
+    volumes:
+      - deshi_glassdoor_data:/var/lib/postgresql/data
+
+volumes:
+  deshi_glassdoor_data:
